@@ -16,6 +16,8 @@
     background: rgb(218, 218, 218);
 }
 header {
+    position: relative;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,11 +27,30 @@ header {
 .gnb .gnb-depth1 {
     display: flex;
 }
-.gnb .gnb-depth1 li a {
-    padding: 20px;
-    font-size: 22px;
+.gnb .gnb-depth1 > li {
+    position: relative;
 }
-
+.gnb .gnb-depth1 > li > a {
+    display: block;
+    width: 120px;
+    font-size: 20px;
+    text-align: center;
+}
+.gnb .gnb-depth2 {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background: #434748;
+}
+.gnb .gnb-depth2 li a {
+    display: block;
+    padding: 7px 0;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
 
 .slide {
     overflow: hidden;
@@ -55,9 +76,72 @@ main {
 .sec-g {
     width: 30%;
     height: 180px;
+    position: relative;
+}
+.sec-g .sec-tit {
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+    border-bottom: 2px solid #000;
+    font-size: 20px;
+}
+.sec-g .link-more {
+    position: absolute;
+    top: 3px;
+    right: 0;
+}
+.lst-bbs a {
+    display: block;
+    overflow: hidden;
+    padding: 2px 0;
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+   
+}
+.lst-bbs li {
+    position: relative;
+    padding-left: 10px;
+}
+.lst-bbs li::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    content: "";
+    width: 3px;
+    height: 3px;
+    background: #000;
+}
+.lst-gallery {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.lst-gallery li {
+    width: 30%;
+}
+.lst-gallery img {
+    display: block;
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    object-position: 50% 0;
+    border-radius: 3px;
+}
+.lst-gallery p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+.blind {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
 }
 
-   
 footer {
     display: flex;
     justify-content: space-between;
