@@ -15,6 +15,7 @@
 
 .wrap {
     width: 1200px;
+    /* padding-top: 100vh; */
     margin: auto;
     background: rgb(218, 218, 218);
 }
@@ -149,6 +150,7 @@ main {
     height: 3px;
     background: #000;
 }
+
 .lst-gallery {
     display: flex;
     justify-content: space-between;
@@ -212,7 +214,7 @@ footer {
     height: 300px;
     margin-top: 30px;
     text-align: center;
-    
+    position: relative;
     border: 1px solid #eee;
     background: #fff;
     border-radius: 5px;
@@ -229,6 +231,6 @@ footer {
     border-radius: 50px;
     background: #000;
     color: #fff;
-    font-size: 40px;
+    font-size: 20px;
     cursor: pointer;
 }
